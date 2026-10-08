@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "CyberShield AI",
+  "version": "1.0.0",
+  "description": "Warns you when the website you are visiting looks unsafe. Never blocks pages on its own.",
+  "permissions": ["storage", "tabs", "activeTab"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "CyberShield AI" },
+  "content_scripts": [{ "matches": ["http://*/*", "https://*/*"], "js": ["content.js"], "run_at": "document_idle" }]
+}

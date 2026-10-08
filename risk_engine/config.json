@@ -1,0 +1,29 @@
+{
+  "thresholds": {
+    "safe_max": 30,
+    "suspicious_max": 60
+  },
+  "weights": {
+    "ml": 0.4,
+    "rules": 0.3,
+    "domain": 0.15,
+    "threat_intel": 0.35,
+    "nlp_ml": 0.45,
+    "nlp_rules": 0.35,
+    "links": 0.35,
+    "email_meta": 0.25
+  },
+  "overrides": {
+    "ti_confirmed_floor": 85,
+    "brand_impersonation_floor": 62,
+    "trusted_domain_cap": 8,
+    "credential_request_floor": 45,
+    "link_high_risk_floor": 65
+  },
+  "class_risk": {
+    "safe": 4,
+    "suspicious": 50,
+    "phishing": 90,
+    "malicious": 100
+  }
+}
